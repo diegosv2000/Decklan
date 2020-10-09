@@ -1,0 +1,185 @@
+
+
+@media screen and (max-width:1050px){
+    
+    #lineDiv{
+        width: 70%;
+    }
+
+
+   
+}
+
+@media screen and (max-width:770px){
+    
+    .main nav button{
+        font-size: 12px;
+        margin: 0 10px;
+    }
+    .main .networks{
+        margin: 20px auto;
+        width: 60%;
+    }
+    .main .networks a{
+
+        width: 25px;
+        height: 25px;
+        font-size: 17px;
+        margin: 0px 15px;
+        padding: 3px;
+
+    }
+
+   
+}
+
+@media screen and (max-width:600px){
+    #start{
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+    .main h1{
+        font-size: 50px;
+    }
+    #irwt{
+        font-size: 12px;
+    }
+
+    .main nav {
+        margin: 20px;
+    
+    }
+
+    .form label{
+        margin: 5px 0px;
+        font-size: 22px;
+    }
+    .form input{
+        width: 260px;
+        height: 20px;
+        padding: 5px 7px;
+        margin: 0 0 8px 0;
+        font-size: 12px;
+    }
+    .form textarea{
+        width: 260px;
+        height: 40px;
+        padding: 5px 7px;
+        margin: 0 0 8px 0;
+
+    }
+    .form button{
+        width: 100px;
+        margin: 20px auto 10px;
+    }
+}
+
+
+@media screen and (max-width:540px){
+    .main h1{
+        margin: 20px;
+        font-size: 45px;
+        letter-spacing: 10px;
+
+    }
+    #irwt{
+        letter-spacing: 14px;
+        margin: 10px;
+        font-size: 14px;
+    }
+    #lineDiv{
+        width: 75%;
+        margin: 20px auto;
+    }
+
+    .main nav button{
+        font-size: 10px;
+        margin: 0 7px;
+    }
+    .main .networks{
+        margin: 15px auto;
+        width: 60%;
+    }
+    .main .networks a{
+
+        width: 25px;
+        height: 25px;
+        font-size: 17px;
+        margin: 0px 15px;
+        padding: 3px;
+
+    }
+
+}
+@media screen and (max-width:430px){
+    .main{
+        margin: 120px auto;
+    }
+    .main h1{
+        margin: 15px;
+        font-size: 40px;
+        letter-spacing: 7px;
+
+    }
+    #irwt{
+        letter-spacing: 12px;
+        margin: 10px;
+        font-size: 11px;
+    }
+
+
+    .main nav button{
+        font-size: 7px;
+        margin: 0 5px;
+    }
+    .main .networks{
+        margin: 10px auto;
+        width: 60%;
+    }
+    .main .networks a{
+
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        margin: 0px 12px;
+        padding: 2px;
+
+    }
+
+}
+@media screen and (max-width:380px){
+
+    .main h1{
+        margin: 10px;
+        font-size: 40px;
+        letter-spacing: 3px;
+
+    }
+    #irwt{
+        letter-spacing: 12px;
+        margin: 10px;
+        font-size: 9px;
+    }
+    .main nav button{
+        font-size: 8px;
+        margin: 0 10px;
+        padding: 5px 5px;
+        border-radius: 10px;
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width:340px){
+    .main{
+        margin: 130px auto;
+    }
+    .main nav button{
+        font-size: 8px;
+        margin: 0 5px;
+        padding: 5px 5px;
+        border-radius: 10px;
+        width: 25%;
+    }
+
+}

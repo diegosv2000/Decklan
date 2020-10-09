@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+button{
+    outline: none;
+}
+.startContainer{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: show;
+    animation-duration: 1s;
+    text-align: center;
+}
+#start{
+    margin: 10px;
+    padding: 15px 35px;
+    background: none;
+    border: 1px solid rgb(75, 105, 122);
+    color: rgb(129, 161, 167);
+    font-size: 17px;
+    letter-spacing: 2px;
+    transition: .5s;
+    animation: flicker 3s linear infinite;
+    font-family: 'Secular One', sans-serif;
+    --hover: #5caab859;
+}
+#start:hover{
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    color: rgb(117, 174, 189);
+    border: 1px solid rgb(86, 149, 185);
+    box-shadow: 0px 0px 20px 2px rgba(130, 183, 190, 0.5);
+    animation: none;
+}
+
+
+
+
+body{
+    /*background: url(https://tecnovortex.com/wp-content/uploads/2010/12/moon.jpg);*/
+    background: url(../img/fondo.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    color: white;
+}
+.main{
+
+    display: block;
+    width: 100vw;
+    margin: 200px 0;
+    text-align: center;
+}
+.main h1{
+    margin: 20px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 60px;
+    letter-spacing: 15px;
+    font-weight: bold;
+}
+#irwt{
+    letter-spacing: 20px;
+    margin: 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.616);
+
+}
+#lineDiv{
+    width: 45%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.658);
+    margin: 30px auto;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px rgb(183, 238, 255);
+}
+.main nav {
+
+    margin: 15px auto;
+    
+
+}
+.main nav button{
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5px 15px;
+    font-size: 16px;
+    margin: 0px 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .5s;
+}
+
+.main nav button:hover{
+    background: rgba(78, 180, 146, 0.1);
+    border: 1px solid rgb(42, 90, 74);
+    color: rgb(78, 180, 146);
+    cursor: pointer;
+}
+
+.main .networks{
+    margin: 30px auto;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main .networks a{
+    background: transparent;
+    color: rgba(245, 245, 245, 0.6);
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    margin: 0px 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    transition: 0.5s;
+}
+.networks .fb:hover{
+
+    border: 1px solid rgb(44, 111, 189);
+    color: rgb(255, 255, 255);
+}
+.networks .ig:hover{
+
+    border: 1px solid rgba(255, 158, 48, 0.521);
+    color: rgb(255, 123, 0);
+}
+.networks .gh:hover{
+
+    border: 1px solid rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+}
+
+
+section{
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+section h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    margin: 20px;
+}
+section .imgSection{
+    width: 300px;
+    height: 250px;
+}
+section p{
+    width: 45%;
+    margin: 15px auto;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+}
+section button{
+    margin: 15px;
+    padding: 8px 16px;
+    font-size: 15px;
+    background: none;
+    border: 1px solid rgba(152, 180, 212, 0.438);
+    color: rgba(255, 255, 255, 0.432);
+    transition: .5s;
+}
+section button:hover{
+    color: rgb(185, 199, 224);
+    border: 1px solid rgb(183, 235, 255);
+    cursor: pointer;
+
+}
+
+#section1,#section2,#section3,#section4,#main{
+    display: none;
+    animation-name: show;
+    animation-duration: 1s;
+}
+
+.form{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: rgba(31, 31, 31, 0.1);
+    border: 1px solid rgb(53, 85, 95);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0px 0px 20px 2px rgba(42, 223, 255, 0.171);
+}
+.form label{
+    margin: 5px 0px;
+    font-size: 30px;
+    color: rgb(206, 206, 206);
+}
+.form input{
+    font-family: 'Roboto Mono', monospace;
+    width: 260px;
+    height: 20px;
+    border: none;
+    border-bottom: 2px solid rgb(67, 90, 90);
+    padding: 5px 7px;
+    margin: 0 0 8px 0;
+    background: rgba(66, 66, 66, 0);
+    color: rgb(194, 194, 194);
+    outline: none;
+}
+.form textarea{
+    width: 260px;
+    height: 60px;
+    border: none;
+    border-bottom: 2px solid rgb(67, 90, 90);
+    padding: 5px 7px;
+    margin: 0 0 8px 0;
+    background: rgba(66, 66, 66, 0);
+    color: rgb(194, 194, 194);
+    outline: none;
+}
+.form button{
+    width: 120px;
+    margin: 30px auto 10px;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hide{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes flicker{
+    0%, 41%, 45%, 47%, 49.5%, 100%  { 
+        opacity: 1;
+    }
+  
+    42%, 44%, 46%,48%,  50%  { 
+        opacity: 0; 
+    }
+}
+
+
+
+
+
