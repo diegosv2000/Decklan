@@ -4,8 +4,18 @@
 }
 
 a{
-    text-decoration: none;
+    color: rgb(232, 248, 250);
+    text-decoration: underline rgb(234, 252, 255);
+    transition: 0.2s;
 }
+
+
+a:hover{
+
+    text-decoration: underline rgba(212, 229, 231, 0.1);
+}
+
+
 button{
     outline: none;
 }
@@ -73,7 +83,6 @@ body{
 
     display: block;
     width: 100vw;
-    margin: 200px 0;
     text-align: center;
 }
 .main h1{
@@ -114,7 +123,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     font-family: 'Ubuntu', sans-serif;
-    transition: .5s;
+    transition: .4s;
 }
 
 .main nav button:hover{
@@ -145,6 +154,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 100%;
     transition: 0.5s;
+    text-decoration: none;
 }
 .networks .fb:hover{
 
@@ -167,7 +177,8 @@ section{
     display: block;
     text-align: center;
     margin: 50px;
-    height: 80%;
+
+
 }
 section h2{
     font-family: 'Ubuntu', sans-serif;
@@ -179,12 +190,28 @@ section .imgSection{
     height: 250px;
 }
 section p{
-    width: 45%;
+    width: 55%;
     margin: 15px auto;
     font-size: 15px;
     font-family: 'Roboto Mono', monospace;
     text-align: justify;
 }
+.blog{
+    width: 50%;
+    margin: 0 auto;
+}
+.blog ul{
+    margin: 10px 0px 20px;
+}
+.blog li{
+    width: 100%;
+    margin: 5px 0;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+}
+
+
 section button{
     margin: 15px;
     padding: 8px 16px;
@@ -247,6 +274,7 @@ section button:hover{
     background: rgba(66, 66, 66, 0);
     color: rgb(194, 194, 194);
     outline: none;
+    resize: none;
 }
 .form button{
     width: 120px;
@@ -285,6 +313,64 @@ section button:hover{
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    overflow: hidden;
+}
+
+.loading{
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  
 
 
 

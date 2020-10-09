@@ -16,7 +16,29 @@
         <link rel="stylesheet" href="./css/responsive.css">
     </head>
 
-    <body>
+    <body class="hidden" id="body">
+
+
+
+
+
+
+
+
+        <div class="loading" id="onload">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
 
         <div id="particles-js"></div>
 
@@ -44,15 +66,8 @@
                     
                 <h2>Who I AM</h2>
     
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
+                <p> My name is Diego, I am a computer science student at the 
+                    National University of Engineering. Some know me as DECKLAN.
                 </p>
                 <button id='home1'>Back</button>
     
@@ -61,15 +76,15 @@
                                 
                 <h2>What I Do</h2>
     
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
+                <p> I have basic knowledge of cybersecurity, game development, 
+                    software development and I am currently an aspiring  full 
+                    stack  developer.  I have experience  in  the programming 
+                    languages ​​Javascript, Python, Java, etc.
+                    I also have knowledge of Html, CSS3 and  Bootstrap,  also 
+                    server-side development in firebase. I have contributed to
+                    the development of the website of the <strong>
+                    <a href="https://gsint.cc/" target="_blank">GSINT</a></strong> study group,
+                    where I am currently a member.
                 </p>
                 <button id='home2'>Back</button>
                 
@@ -78,16 +93,30 @@
                                 
                 <h2>Blog</h2>
     
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores a, quod consequatur 
-                    asperiores accusantium totam? Obcaecati saepe sed, officia quidem possimus rem sequi, nulla 
-                    vitae provident, voluptate praesentium autem. Veniam dolores a, quod consequatur
+                <p> At the moment, how much with some projects that I have developed
+                    as a team and individually.these are some:
                 </p>
+
+                <div class="blog">
+                    <ul>
+                        <li> <a href="https://gsint.cc/" target="_blank">
+                            GSINT website</a>
+                        </li>
+
+                        <li> <a href="https://diegosv2000.github.io/Travis/public/" target="_blank">
+                            COVID-19 Infected Tracking Prototype (TRAVIS)</a>
+                        </li>
+
+                        <li> <a href="https://diegosv2000.github.io/SimonSays-Game/" target="_blank">
+                            Simos Says Game</a>
+                        </li>
+
+                        <li> <a href="https://github.com/diegosv2000/The-Game-of-Life/" target="_blank">
+                            Game of Life with Python (Code)</a>
+                        </li>
+                    </ul>
+                </div>
+
                 <button id='home3'>Back</button>
                 
             </section>
@@ -122,6 +151,7 @@
             emailjs.init("user_JnaDx76VWEwcRmGt1YOB9");
             })();
         </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="../src/particles.js"></script>
         <script src="../src/app.js"></script>
     </body>

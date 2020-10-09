@@ -1,4 +1,21 @@
+window.onload = function(){
+    $('#onload').fadeOut();
 
+
+    let start = document.getElementById('start');
+    start.onclick = () =>{
+        document.getElementById('startContainer').style.animationDuration = '.7s';
+        document.getElementById('startContainer').style.animationName = 'hide';
+        setTimeout(() => {
+            document.getElementById('startContainer').style.display = 'none';
+            document.getElementById('start').style.animationName = 'show';
+            document.getElementById('main').style.display='block';
+        }, 700);
+        $('body').removeClass('hidden');
+    }
+
+    
+}
 function WhoIAM(){
     document.getElementById('main').style.animationName='hide';
     setTimeout( ()=>{
@@ -121,9 +138,10 @@ function Start(){
             document.getElementById('main').style.display='block';
         }, 700);
     }
+    $('body').removeClass('hidden');
 }
 
-Start();
+
 
 
 
