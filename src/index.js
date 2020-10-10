@@ -101,7 +101,7 @@ function Send(){
     let affair = document.getElementById('affair').value;
     let email = document.getElementById('email').value;
     let text = document.getElementById('message').value;
-    fetch('./data.json').then( request => request.json() )
+    fetch('../src/data.json').then( request => request.json() )
     .then( data => {
         data.forEach(e => {
             emailjs.send(e.sID ,e.tID,{
