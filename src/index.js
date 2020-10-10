@@ -97,23 +97,22 @@ function ContactMe(){
 
 function Send(){
 
+    const data = {
+        sID  : "service_jw0i0sw",
+        tID  : "template_v4k67yq",
+        name : "Decklan"
+
+    }
     let name = document.getElementById('name').value;
     let affair = document.getElementById('affair').value;
     let email = document.getElementById('email').value;
     let text = document.getElementById('message').value;
-    fetch('../src/data.json').then( request => request.json() )
-    .then( data => {
-        data.forEach(e => {
-            emailjs.send(e.sID ,e.tID,{
-                from_name: name,
-                to_name: e.name,
-                from_email: email,
-                from_affair: affair,
-                message: text
-            });
-        });
-    }).catch( error => {
-        console.log(error.message)
+    emailjs.send(data.sID ,data.tID,{
+        from_name: name,
+        to_name: data.name,
+        from_email: email,
+        from_affair: affair,
+        message: text
     });
     swal("Sent", "Decklan got your message", "success");
     document.getElementById('name').value = '';
