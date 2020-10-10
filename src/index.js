@@ -123,9 +123,6 @@ function Send(){
     
 }
 
-(function() {
-    emailjs.init("user_JnaDx76VWEwcRmGt1YOB9");
-})();
 
 function Start(){
     let start = document.getElementById('start');
