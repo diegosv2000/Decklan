@@ -171,6 +171,11 @@ body{
     border: 1px solid rgb(44, 44, 44);
     color: rgb(255, 255, 255);
 }
+.networks .in:hover{
+
+    border: 1px solid rgb(44, 111, 189);
+    color: rgb(255, 255, 255);
+}
 
 
 section{
@@ -660,6 +665,11 @@ section button:hover{
     }
     #lineDiv{
         width: 85%;
+    }
+    .main .networks a{
+        
+        margin: 0px 10px 10px;
+        
     }
 }
 
