@@ -17,21 +17,28 @@
 
     <body class="hidden" id="body">
 
+        <div class="scanlines"></div>
+        <div class="overlay"></div>
 
         <div class="loading" id="onload">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
+            <div class="boot-sequence">
+                <div class="boot-line" id="boot1">DECKLAN_OS v2.1.0</div>
+                <div class="boot-line" id="boot2">loading modules...</div>
+                <div class="boot-line" id="boot3">establishing connection...</div>
+                <div class="boot-line" id="boot4">access granted.</div>
             </div>
         </div>
 
         <div id="particles-js"></div>
 
         <main class="container">
-            <div class="startContainer" id="startContainer"><button id="start" class="pulse">START</button></div>
+            <div class="startContainer" id="startContainer">
+                <button id="start">[ ENTER ]</button>
+                <div class="start-hint">press to initialize</div>
+            </div>
             <div class="main" id="main">
-                <h1> DECKLAN</h1>
-                <div id="irwt">In Satoshi We Trust</div>
+                <h1 data-text="DECKLAN"> DECKLAN</h1>
+                <div id="irwt"><span id="irwt-text"></span><span class="cursor">_</span></div>
                 <div id="lineDiv"></div>
     
                 <nav>
@@ -51,12 +58,27 @@
 
                 <h2>About</h2>
 
-                <p>Full Stack Developer with 4+ years building critical financial systems.
-                   Currently at Kashin (YC W22), a fintech in Lima, Peru.
-                   I focus on high-performance backend services, distributed systems,
-                   and product-level engineering. Some know me as DECKLAN.
-                </p>
-                <button id='home1'>Back</button>
+                <div class="terminal-card">
+                    <div class="terminal-bar">
+                        <span class="t-dot" style="background:#ff5f57"></span>
+                        <span class="t-dot" style="background:#febc2e"></span>
+                        <span class="t-dot" style="background:#28c840"></span>
+                        <span class="t-title">decklan@system — whoami</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="t-row"><span class="t-key">name</span><span class="t-val">Diego Salazar</span></div>
+                        <div class="t-row"><span class="t-key">alias</span><span class="t-val">DECKLAN</span></div>
+                        <div class="t-row"><span class="t-key">role</span><span class="t-val">Full Stack Developer</span></div>
+                        <div class="t-row"><span class="t-key">based</span><span class="t-val">Lima, Perú</span></div>
+                        <div class="t-row"><span class="t-key">company</span><span class="t-val">Kashin · <span class="t-accent">YC W22</span></span></div>
+                        <div class="t-row"><span class="t-key">experience</span><span class="t-val">4+ years</span></div>
+                        <div class="t-row"><span class="t-key">stack</span><span class="t-val">Rust · TypeScript · Node.js</span></div>
+                        <div class="t-row"><span class="t-key">focus</span><span class="t-val">fintech · critical systems · distributed arch</span></div>
+                        <div class="t-row t-prompt"><span class="t-val">~ <span class="cursor">_</span></span></div>
+                    </div>
+                </div>
+
+                <button id='home1'><span class="btn-chevron">‹</span> return</button>
 
             </section>
             <section id="section2">
@@ -94,47 +116,47 @@
                     </div>
                 </div>
 
-                <button id='home2'>Back</button>
+                <button id='home2'><span class="btn-chevron">‹</span> return</button>
 
             </section>
             <section id="section3">
 
                 <h2>Skills</h2>
 
-                <div class="skills">
-                    <div class="skill-group">
-                        <span class="skill-label">Languages</span>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card-header"><span class="skill-card-icon">{&nbsp;}</span>Languages</div>
                         <div class="skill-tags">
                             <span>Rust</span><span>TypeScript</span><span>JavaScript</span><span>Python</span>
                         </div>
                     </div>
-                    <div class="skill-group">
-                        <span class="skill-label">Frontend</span>
+                    <div class="skill-card">
+                        <div class="skill-card-header"><span class="skill-card-icon">[&nbsp;]</span>Frontend</div>
                         <div class="skill-tags">
-                            <span>React.js</span><span>Next.js</span><span>Svelte</span><span>React Native</span><span>Tailwind CSS</span>
+                            <span>React.js</span><span>Next.js</span><span>Svelte</span><span>React Native</span><span>Tailwind</span>
                         </div>
                     </div>
-                    <div class="skill-group">
-                        <span class="skill-label">Backend</span>
+                    <div class="skill-card">
+                        <div class="skill-card-header"><span class="skill-card-icon">~</span>Backend</div>
                         <div class="skill-tags">
                             <span>Node.js</span><span>Fastify</span><span>Actix</span><span>Tokio</span>
                         </div>
                     </div>
-                    <div class="skill-group">
-                        <span class="skill-label">Databases</span>
+                    <div class="skill-card">
+                        <div class="skill-card-header"><span class="skill-card-icon">#</span>Databases</div>
                         <div class="skill-tags">
                             <span>PostgreSQL</span><span>MongoDB</span>
                         </div>
                     </div>
-                    <div class="skill-group">
-                        <span class="skill-label">Infra / Messaging</span>
+                    <div class="skill-card skill-card-wide">
+                        <div class="skill-card-header"><span class="skill-card-icon">&amp;</span>Infra / Messaging</div>
                         <div class="skill-tags">
                             <span>MQTT</span><span>RabbitMQ</span><span>Sentry</span><span>Firebase</span>
                         </div>
                     </div>
                 </div>
 
-                <button id='home3'>Back</button>
+                <button id='home3'><span class="btn-chevron">‹</span> return</button>
 
             </section>
         </main>

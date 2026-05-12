@@ -1,83 +1,67 @@
 window.onload = function () {
-  $("#onload").fadeOut();
+  const bootLines = document.querySelectorAll(".boot-line");
+  const bootDelays = [200, 700, 1300, 2000];
 
-  let start = document.getElementById("start");
-  start.onclick = () => {
-    document.getElementById("startContainer").style.animationDuration = ".7s";
-    document.getElementById("startContainer").style.animationName = "hide";
+  bootLines.forEach((line, i) => {
+    setTimeout(() => line.classList.add("visible"), bootDelays[i]);
+  });
+
+  setTimeout(() => {
+    bootLines.forEach((line, i) => {
+      if (i < bootLines.length - 1) line.classList.add("dim");
+    });
+  }, 2600);
+
+  setTimeout(() => {
+    $("#onload").fadeOut(500);
+  }, 3000);
+
+  setTimeout(() => {
+    typeWriter("In Satoshi We Trust", "irwt-text", 55);
+  }, 3600);
+
+  document.getElementById("start").onclick = () => {
+    const sc = document.getElementById("startContainer");
+    sc.style.animationDuration = ".6s";
+    sc.style.animationName = "hide";
     setTimeout(() => {
-      document.getElementById("startContainer").style.display = "none";
-      document.getElementById("start").style.animationName = "show";
+      sc.style.display = "none";
       document.getElementById("main").style.display = "block";
-    }, 700);
+    }, 600);
     $("body").removeClass("hidden");
   };
 };
-function WhoIAM() {
-  document.getElementById("main").style.animationName = "hide";
-  setTimeout(() => {
-    let section = document.getElementById("section1");
-    section.style.display = "block";
-    document.getElementById("main").style.display = "none";
-    let back = document.getElementById("home1");
-    back.onclick = () => {
-      document.getElementById("main").style.animationName = "show";
-      section.style.animationName = "hide";
-      setTimeout(() => {
-        section.style.display = "none";
-        section.style.animationName = "show";
-        document.getElementById("main").style.display = "block";
-      }, 500);
-    };
-  }, 500);
-}
-function WhatIDo() {
-  document.getElementById("main").style.animationName = "hide";
-  setTimeout(() => {
-    let section = document.getElementById("section2");
-    section.style.display = "block";
-    document.getElementById("main").style.display = "none";
-    let back = document.getElementById("home2");
-    back.onclick = () => {
-      document.getElementById("main").style.animationName = "show";
-      section.style.animationName = "hide";
-      setTimeout(() => {
-        section.style.display = "none";
-        section.style.animationName = "show";
-        document.getElementById("main").style.display = "block";
-      }, 500);
-    };
-  }, 500);
-}
-function Skills() {
-  document.getElementById("main").style.animationName = "hide";
-  setTimeout(() => {
-    let section = document.getElementById("section3");
-    section.style.display = "block";
-    document.getElementById("main").style.display = "none";
-    let back = document.getElementById("home3");
-    back.onclick = () => {
-      document.getElementById("main").style.animationName = "show";
-      section.style.animationName = "hide";
-      setTimeout(() => {
-        section.style.display = "none";
-        section.style.animationName = "show";
-        document.getElementById("main").style.display = "block";
-      }, 500);
-    };
-  }, 500);
+
+function typeWriter(text, elementId, speed) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  let i = 0;
+  const interval = setInterval(() => {
+    el.textContent += text[i];
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, speed);
 }
 
-function Start() {
-  let start = document.getElementById("start");
-  start.onclick = () => {
-    document.getElementById("startContainer").style.animationDuration = ".7s";
-    document.getElementById("startContainer").style.animationName = "hide";
-    setTimeout(() => {
-      document.getElementById("startContainer").style.display = "none";
-      document.getElementById("start").style.animationName = "show";
-      document.getElementById("main").style.display = "block";
-    }, 700);
-  };
-  $("body").removeClass("hidden");
+function showSection(sectionId, backId) {
+  const main = document.getElementById("main");
+  main.style.animationName = "hide";
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    section.style.display = "block";
+    main.style.display = "none";
+    document.getElementById(backId).onclick = () => {
+      main.style.animationName = "show";
+      section.style.animationName = "hide";
+      setTimeout(() => {
+        section.style.display = "none";
+        section.style.animationName = "show";
+        main.style.display = "block";
+      }, 450);
+    };
+  }, 450);
 }
+
+function WhoIAM() { showSection("section1", "home1"); }
+function WhatIDo() { showSection("section2", "home2"); }
+function Skills()  { showSection("section3", "home3"); }
