@@ -369,33 +369,29 @@ body {
 
 /* ─── Social networks ────────────────────────────────────── */
 .main .networks {
-  margin: 28px auto;
-  width: 30%;
+  margin: 20px auto 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 28px;
 }
 
 .main .networks a {
   background: transparent;
-  color: rgba(245, 245, 245, 0.35);
-  width: 36px;
-  height: 36px;
-  font-size: 15px;
-  margin: 0 14px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 2px;
-  transition: 0.4s;
+  border: none;
+  transition: color 0.3s, text-shadow 0.3s;
   text-decoration: none;
 }
 
-.networks .fb:hover { border-color: rgba(66, 103, 178, 0.8); color: rgb(66, 103, 178); box-shadow: 0 0 14px rgba(66, 103, 178, 0.35); }
-.networks .ig:hover { border-color: rgba(240, 148, 51, 0.8); color: rgb(240, 148, 51); box-shadow: 0 0 14px rgba(240, 148, 51, 0.35); }
-.networks .gh:hover { border-color: rgba(240, 240, 240, 0.8); color: white; box-shadow: 0 0 14px rgba(255, 255, 255, 0.2); }
-.networks .in:hover { border-color: rgba(10, 102, 194, 0.8); color: rgb(10, 102, 194); box-shadow: 0 0 14px rgba(10, 102, 194, 0.35); }
+.networks .fb:hover { color: rgb(100, 140, 220); text-shadow: 0 0 12px rgba(66, 103, 178, 0.7); }
+.networks .ig:hover { color: rgb(240, 148, 51);  text-shadow: 0 0 12px rgba(240, 148, 51, 0.7); }
+.networks .gh:hover { color: rgba(230, 230, 230, 0.95); text-shadow: 0 0 12px rgba(255,255,255,0.4); }
+.networks .in:hover { color: rgb(60, 140, 220);  text-shadow: 0 0 12px rgba(10, 102, 194, 0.7); }
 
 /* ─── Sections ───────────────────────────────────────────── */
 section {
