@@ -49,7 +49,7 @@ function WhatIDo() {
     };
   }, 500);
 }
-function Blog() {
+function Skills() {
   document.getElementById("main").style.animationName = "hide";
   setTimeout(() => {
     let section = document.getElementById("section3");

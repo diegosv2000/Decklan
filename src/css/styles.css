@@ -180,19 +180,100 @@ section p {
   font-family: "Roboto Mono", monospace;
   text-align: justify;
 }
-.blog {
-  width: 50%;
-  margin: 0 auto;
-}
-.blog ul {
-  margin: 10px 0px 20px;
-}
-.blog li {
-  width: 100%;
-  margin: 5px 0;
+.timeline {
+  width: 55%;
+  margin: 10px auto 20px;
   text-align: left;
+}
+.timeline-item {
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0 0 24px 20px;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: rgba(130, 183, 190, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  box-shadow: 0 0 8px rgba(130, 183, 190, 0.6);
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.timeline-role {
   font-family: "Roboto Mono", monospace;
-  font-size: 15px;
+  font-size: 14px;
+  color: rgba(130, 183, 190, 0.9);
+  font-weight: 600;
+}
+.timeline-period {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.timeline-company {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 3px 0 8px;
+}
+.timeline-desc {
+  width: 100% !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  font-family: "Roboto Mono", monospace;
+  color: rgba(200, 220, 225, 0.75);
+  text-align: left !important;
+  line-height: 1.6;
+}
+
+.skills {
+  width: 55%;
+  margin: 10px auto 20px;
+  text-align: left;
+}
+.skill-group {
+  margin-bottom: 14px;
+}
+.skill-label {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: rgba(130, 183, 190, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 6px;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-tags span {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  color: rgba(220, 240, 245, 0.85);
+  border: 1px solid rgba(95, 132, 141, 0.5);
+  border-radius: 3px;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+.skill-tags span:hover {
+  border-color: rgba(130, 183, 190, 0.8);
+  color: rgb(183, 238, 255);
+  box-shadow: 0 0 8px rgba(130, 183, 190, 0.2);
+  cursor: default;
 }
 
 section button {
@@ -324,11 +405,8 @@ section button:hover {
     margin: 20px auto;
     width: 60%;
   }
-  .blog {
-    width: 70%;
-  }
-  .blog li {
-    font-size: 20px;
+  .timeline, .skills {
+    width: 75%;
   }
 }
 
@@ -349,11 +427,8 @@ section button:hover {
     font-size: 40px;
     margin: 20px;
   }
-  .blog {
-    width: 68%;
-  }
-  .blog li {
-    font-size: 15px;
+  .timeline, .skills {
+    width: 80%;
   }
 }
 
@@ -382,11 +457,8 @@ section button:hover {
     margin: 5px auto;
     font-size: 14px;
   }
-  .blog ul {
-    margin: 0px 0 10px;
-  }
-  .blog li {
-    font-size: 12px;
+  .timeline, .skills {
+    width: 88%;
   }
 }
 
@@ -459,11 +531,8 @@ section button:hover {
     width: 95%;
     font-size: 10px;
   }
-  .blog {
-    width: 85%;
-  }
-  .blog li {
-    font-size: 8px;
+  .timeline, .skills {
+    width: 92%;
   }
 
   section button {

@@ -31,13 +31,13 @@
             <div class="startContainer" id="startContainer"><button id="start" class="pulse">START</button></div>
             <div class="main" id="main">
                 <h1> DECKLAN</h1>
-                <div id="irwt">InRootWeTrust</div>
+                <div id="irwt">In Satoshi We Trust</div>
                 <div id="lineDiv"></div>
     
                 <nav>
-                    <button onclick="WhoIAM()"> Who I AM </button>
-                    <button onclick="WhatIDo()"> What I Do </button>
-                    <button onclick="Blog()"> Blog </button>
+                    <button onclick="WhoIAM()"> About </button>
+                    <button onclick="WhatIDo()"> Experience </button>
+                    <button onclick="Skills()"> Skills </button>
                 </nav>
     
                 <div class="networks">
@@ -48,71 +48,94 @@
                 </div>
             </div>
             <section id="section1">
-                    
-                <h2>Who I AM</h2>
-    
-                <p> My name is Diego, I am a computer science student at the 
-                    National University of Engineering. Some know me as DECKLAN.
+
+                <h2>About</h2>
+
+                <p>Full Stack Developer with 4+ years building critical financial systems.
+                   Currently at Kashin (YC W22), a fintech in Lima, Peru.
+                   I focus on high-performance backend services, distributed systems,
+                   and product-level engineering. Some know me as DECKLAN.
                 </p>
                 <button id='home1'>Back</button>
-    
+
             </section>
-            <section id="section2" >
-                                
-                <h2>What I Do</h2>
-    
-                <p> I have basic knowledge of cybersecurity, game development, 
-                    software development and I am currently an aspiring  full 
-                    stack  developer.  I have experience  in  the programming 
-                    languages ​​Javascript, Python and C#.
-                    I also have knowledge of Html, CSS3 and  Bootstrap,  some 
-                    experiencie on app deployment using Firebase Hosting. 
-                    I  have  contributed to the  development  of  the website 
-                    of the <strong>
-                    <a href="https://gsint.cc/" target="_blank">GSINT</a></strong> study group,
-                    where I am currently a member.
-                </p>
+            <section id="section2">
+
+                <h2>Experience</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Full Stack Developer</span>
+                            <span class="timeline-period">Jul 2022 – present</span>
+                        </div>
+                        <div class="timeline-company">Kashin · YC W22 · Lima, Perú</div>
+                        <p class="timeline-desc">Fintech de micro préstamos. Core financiero crítico con Rust/Actix,
+                        sistema KYC con Svelte, arquitectura orientada a eventos con MQTT y RabbitMQ,
+                        migración de plataforma legacy (Nuxt → Next.js + TypeScript).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Full Stack Developer</span>
+                            <span class="timeline-period">Sep 2021 – May 2022</span>
+                        </div>
+                        <div class="timeline-company">Chazki · Lima, Perú</div>
+                        <p class="timeline-desc">Plataforma logística regional. Transición tecnológica
+                        y mantenimiento de sistemas críticos para la operación.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Frontend Developer</span>
+                            <span class="timeline-period">Apr 2021 – Sep 2021</span>
+                        </div>
+                        <div class="timeline-company">Chicho Corp · Lima, Perú</div>
+                        <p class="timeline-desc">Plataforma de salud integral (Healthtech) para un hospital
+                        en Estados Unidos, enfocada en telemedicina.</p>
+                    </div>
+                </div>
+
                 <button id='home2'>Back</button>
-                
+
             </section>
             <section id="section3">
-                                
-                <h2>Blog</h2>
-    
-                <p> At the moment, how much with some projects that I have developed
-                    as a team and individually. These are some:
-                </p>
 
-                <div class="blog">
-                    <ul>
-                        <li> <a href="https://gsint.cc/" target="_blank">
-                            GSINT website</a>
-                        </li>
+                <h2>Skills</h2>
 
-                        <li> <a href="https://diegosv2000.github.io/Travis/public/" target="_blank">
-                            COVID-19 Infected Tracking Prototype (TRAVIS)</a>
-                        </li>
-
-                        <li> <a href="https://diegosv2000.github.io/SimonSays-Game/" target="_blank">
-                            Simos Says Game</a>
-                        </li>
-
-                        <li> <a href="https://github.com/diegosv2000/The-Game-of-Life/" target="_blank">
-                            Game of Life with Python (Code)</a>
-                        </li>
-
-                        <li> <a href="https://voto-informado-uni.netlify.app/" target="_blank">
-                            Voto Informado UNI</a>
-                        </li>
-
-                        <li> <a href="https://michamba.netlify.app/" target="_blank">
-                            michamba-web</a>
-                        </li>
-                    </ul>
+                <div class="skills">
+                    <div class="skill-group">
+                        <span class="skill-label">Languages</span>
+                        <div class="skill-tags">
+                            <span>Rust</span><span>TypeScript</span><span>JavaScript</span><span>Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-label">Frontend</span>
+                        <div class="skill-tags">
+                            <span>React.js</span><span>Next.js</span><span>Svelte</span><span>React Native</span><span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-label">Backend</span>
+                        <div class="skill-tags">
+                            <span>Node.js</span><span>Fastify</span><span>Actix</span><span>Tokio</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-label">Databases</span>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span><span>MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-label">Infra / Messaging</span>
+                        <div class="skill-tags">
+                            <span>MQTT</span><span>RabbitMQ</span><span>Sentry</span><span>Firebase</span>
+                        </div>
+                    </div>
                 </div>
 
                 <button id='home3'>Back</button>
-                
+
             </section>
         </main>
 
