@@ -67,48 +67,6 @@ function Blog() {
     };
   }, 500);
 }
-function ContactMe() {
-  document.getElementById("main").style.animationName = "hide";
-  setTimeout(() => {
-    let section = document.getElementById("section4");
-    section.style.display = "block";
-    document.getElementById("main").style.display = "none";
-    let back = document.getElementById("home4");
-    back.onclick = () => {
-      document.getElementById("main").style.animationName = "show";
-      section.style.animationName = "hide";
-      setTimeout(() => {
-        section.style.display = "none";
-        section.style.animationName = "show";
-        document.getElementById("main").style.display = "block";
-      }, 500);
-    };
-  }, 500);
-}
-
-function Send() {
-  const data = {
-    sID: "service_jw0i0sw",
-    tID: "template_v4k67yq",
-    name: "Decklan",
-  };
-  let name = document.getElementById("name").value;
-  let affair = document.getElementById("affair").value;
-  let email = document.getElementById("email").value;
-  let text = document.getElementById("message").value;
-  emailjs.send(data.sID, data.tID, {
-    from_name: name,
-    to_name: data.name,
-    from_email: email,
-    from_affair: affair,
-    message: text,
-  });
-  swal("Sent", "Decklan got your message", "success");
-  document.getElementById("name").value = "";
-  document.getElementById("affair").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
-}
 
 function Start() {
   let start = document.getElementById("start");
