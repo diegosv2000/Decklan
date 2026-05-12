@@ -1,3 +1,33 @@
+(function initCursor() {
+  const outer = document.getElementById("cursorOuter");
+  const inner = document.getElementById("cursorInner");
+  if (!outer || !inner) return;
+
+  let mouseX = -100, mouseY = -100;
+  let outerX = -100, outerY = -100;
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    inner.style.left = mouseX + "px";
+    inner.style.top  = mouseY + "px";
+  });
+
+  document.addEventListener("mouseover", (e) => {
+    const over = e.target.closest("button, a");
+    outer.classList.toggle("is-hovering", !!over);
+    inner.classList.toggle("is-hovering", !!over);
+  });
+
+  (function loop() {
+    outerX += (mouseX - outerX) * 0.14;
+    outerY += (mouseY - outerY) * 0.14;
+    outer.style.left = outerX + "px";
+    outer.style.top  = outerY + "px";
+    requestAnimationFrame(loop);
+  })();
+})();
+
 window.onload = function () {
   const bootLines = document.querySelectorAll(".boot-line");
   const bootDelays = [200, 700, 1300, 2000];

@@ -17,6 +17,8 @@
 
     <body class="hidden" id="body">
 
+        <div class="cursor-outer" id="cursorOuter"></div>
+        <div class="cursor-inner" id="cursorInner"></div>
         <div class="scanlines"></div>
         <div class="overlay"></div>
 
@@ -33,6 +35,11 @@
 
         <main class="container">
             <div class="startContainer" id="startContainer">
+                <div class="start-header">
+                    <div class="start-header-line"></div>
+                    <span class="start-header-text">DECKLAN_OS</span>
+                    <div class="start-header-line right"></div>
+                </div>
                 <button id="start">[ ENTER ]</button>
                 <div class="start-hint">press to initialize</div>
             </div>
@@ -54,7 +61,6 @@
                     </nav>
 
                     <div class="networks">
-                        <a href="https://www.facebook.com/profile" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/diego.sa.ve/" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
                         <a href="https://github.com/diegosv2000" target="_blank" class="gh"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/dsalazarv/" target="_blank" class="in"><i class="fab fa-linkedin-in"></i></a>
@@ -68,73 +74,91 @@
                 </div>
             </div>
             <section id="section1">
+                <div class="section-panel">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+                    <div class="breadcrumb">DECKLAN <span class="bc-sep">/</span> ABOUT</div>
 
-                <h2>About</h2>
+                    <h2>About</h2>
 
-                <div class="terminal-card">
-                    <div class="terminal-bar">
-                        <span class="t-dot" style="background:#ff5f57"></span>
-                        <span class="t-dot" style="background:#febc2e"></span>
-                        <span class="t-dot" style="background:#28c840"></span>
-                        <span class="t-title">decklan@system — whoami</span>
+                    <div class="terminal-card">
+                        <div class="terminal-bar">
+                            <span class="t-dot" style="background:#ff5f57"></span>
+                            <span class="t-dot" style="background:#febc2e"></span>
+                            <span class="t-dot" style="background:#28c840"></span>
+                            <span class="t-title">decklan@system — whoami</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="t-row"><span class="t-key">name</span><span class="t-val">Diego Salazar</span></div>
+                            <div class="t-row"><span class="t-key">alias</span><span class="t-val">DECKLAN</span></div>
+                            <div class="t-row"><span class="t-key">role</span><span class="t-val">Full Stack Developer</span></div>
+                            <div class="t-row"><span class="t-key">based</span><span class="t-val">Lima, Perú</span></div>
+                            <div class="t-row"><span class="t-key">company</span><span class="t-val">Kashin · <span class="t-accent">YC W22</span></span></div>
+                            <div class="t-row"><span class="t-key">experience</span><span class="t-val">4+ years</span></div>
+                            <div class="t-row"><span class="t-key">stack</span><span class="t-val">Rust · TypeScript · Node.js</span></div>
+                            <div class="t-row"><span class="t-key">focus</span><span class="t-val">fintech · critical systems · distributed arch</span></div>
+                            <div class="t-row t-prompt"><span class="t-val">~ <span class="cursor">_</span></span></div>
+                        </div>
                     </div>
-                    <div class="terminal-body">
-                        <div class="t-row"><span class="t-key">name</span><span class="t-val">Diego Salazar</span></div>
-                        <div class="t-row"><span class="t-key">alias</span><span class="t-val">DECKLAN</span></div>
-                        <div class="t-row"><span class="t-key">role</span><span class="t-val">Full Stack Developer</span></div>
-                        <div class="t-row"><span class="t-key">based</span><span class="t-val">Lima, Perú</span></div>
-                        <div class="t-row"><span class="t-key">company</span><span class="t-val">Kashin · <span class="t-accent">YC W22</span></span></div>
-                        <div class="t-row"><span class="t-key">experience</span><span class="t-val">4+ years</span></div>
-                        <div class="t-row"><span class="t-key">stack</span><span class="t-val">Rust · TypeScript · Node.js</span></div>
-                        <div class="t-row"><span class="t-key">focus</span><span class="t-val">fintech · critical systems · distributed arch</span></div>
-                        <div class="t-row t-prompt"><span class="t-val">~ <span class="cursor">_</span></span></div>
-                    </div>
+
+                    <button id='home1'><span class="btn-chevron">‹</span> return</button>
                 </div>
-
-                <button id='home1'><span class="btn-chevron">‹</span> return</button>
-
             </section>
             <section id="section2">
+                <div class="section-panel">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+                    <div class="breadcrumb">DECKLAN <span class="bc-sep">/</span> EXPERIENCE</div>
 
-                <h2>Experience</h2>
+                    <h2>Experience</h2>
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-role">Full Stack Developer</span>
-                            <span class="timeline-period">Jul 2022 – present</span>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="timeline-role">Full Stack Developer</span>
+                                <span class="timeline-period">Jul 2022 – present</span>
+                            </div>
+                            <div class="timeline-company">Kashin · YC W22 · Lima, Perú</div>
+                            <p class="timeline-desc">Fintech de micro préstamos. Core financiero crítico con Rust/Actix,
+                            sistema KYC con Svelte, arquitectura orientada a eventos con MQTT y RabbitMQ,
+                            migración de plataforma legacy (Nuxt → Next.js + TypeScript).</p>
                         </div>
-                        <div class="timeline-company">Kashin · YC W22 · Lima, Perú</div>
-                        <p class="timeline-desc">Fintech de micro préstamos. Core financiero crítico con Rust/Actix,
-                        sistema KYC con Svelte, arquitectura orientada a eventos con MQTT y RabbitMQ,
-                        migración de plataforma legacy (Nuxt → Next.js + TypeScript).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-role">Full Stack Developer</span>
-                            <span class="timeline-period">Sep 2021 – May 2022</span>
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="timeline-role">Full Stack Developer</span>
+                                <span class="timeline-period">Sep 2021 – May 2022</span>
+                            </div>
+                            <div class="timeline-company">Chazki · Lima, Perú</div>
+                            <p class="timeline-desc">Plataforma logística regional. Transición tecnológica
+                            y mantenimiento de sistemas críticos para la operación.</p>
                         </div>
-                        <div class="timeline-company">Chazki · Lima, Perú</div>
-                        <p class="timeline-desc">Plataforma logística regional. Transición tecnológica
-                        y mantenimiento de sistemas críticos para la operación.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-role">Frontend Developer</span>
-                            <span class="timeline-period">Apr 2021 – Sep 2021</span>
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="timeline-role">Frontend Developer</span>
+                                <span class="timeline-period">Apr 2021 – Sep 2021</span>
+                            </div>
+                            <div class="timeline-company">Chicho Corp · Lima, Perú</div>
+                            <p class="timeline-desc">Plataforma de salud integral (Healthtech) para un hospital
+                            en Estados Unidos, enfocada en telemedicina.</p>
                         </div>
-                        <div class="timeline-company">Chicho Corp · Lima, Perú</div>
-                        <p class="timeline-desc">Plataforma de salud integral (Healthtech) para un hospital
-                        en Estados Unidos, enfocada en telemedicina.</p>
                     </div>
+
+                    <button id='home2'><span class="btn-chevron">‹</span> return</button>
                 </div>
-
-                <button id='home2'><span class="btn-chevron">‹</span> return</button>
-
             </section>
             <section id="section3">
+                <div class="section-panel">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+                    <div class="breadcrumb">DECKLAN <span class="bc-sep">/</span> SKILLS</div>
 
-                <h2>Skills</h2>
+                    <h2>Skills</h2>
 
                 <div class="skills-grid">
                     <div class="skill-card">
@@ -169,8 +193,8 @@
                     </div>
                 </div>
 
-                <button id='home3'><span class="btn-chevron">‹</span> return</button>
-
+                    <button id='home3'><span class="btn-chevron">‹</span> return</button>
+                </div>
             </section>
         </main>
 
