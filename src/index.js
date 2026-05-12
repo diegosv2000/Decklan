@@ -65,3 +65,29 @@ function showSection(sectionId, backId) {
 function WhoIAM() { showSection("section1", "home1"); }
 function WhatIDo() { showSection("section2", "home2"); }
 function Skills()  { showSection("section3", "home3"); }
+
+(function setupScramble() {
+  const chars = "!@#$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const h1 = document.querySelector(".main h1");
+  const original = "DECKLAN";
+
+  function scramble() {
+    let i = 0;
+    const iv = setInterval(() => {
+      const t = original.split("").map((c, idx) => {
+        if (idx < i) return c;
+        return chars[Math.floor(Math.random() * chars.length)];
+      }).join("");
+      h1.firstChild.nodeValue = " " + t;
+      h1.setAttribute("data-text", t);
+      i += 0.38;
+      if (i > original.length) {
+        h1.firstChild.nodeValue = " " + original;
+        h1.setAttribute("data-text", original);
+        clearInterval(iv);
+      }
+    }, 38);
+  }
+
+  setInterval(scramble, 5500);
+})();
