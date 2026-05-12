@@ -531,7 +531,7 @@ section p {
   line-height: 1.9;
 }
 
-section > button {
+.section-panel > button {
   margin: 28px;
   padding: 6px 0;
   font-size: 12px;
@@ -546,12 +546,12 @@ section > button {
   gap: 6px;
 }
 
-section > button:hover {
+.section-panel > button:hover {
   color: rgba(183, 238, 255, 0.9);
-  cursor: pointer;
+  cursor: none;
 }
 
-section > button:hover .btn-chevron {
+.section-panel > button:hover .btn-chevron {
   transform: translateX(-4px);
 }
 
@@ -979,7 +979,7 @@ section > button:hover .btn-chevron {
 @media screen and (max-width: 340px) {
   .main { margin: 120px auto; }
   .main nav button { font-size: 6px; margin: 0 2px; padding: 4px 6px; }
-  section > button { font-size: 10px; }
+  .section-panel > button { font-size: 10px; }
   #lineDiv { width: 88%; }
   .main .networks a { margin: 0 8px 8px; }
 }
