@@ -78,7 +78,7 @@ function showSection(sectionId, backId) {
   main.style.animationName = "hide";
   setTimeout(() => {
     const section = document.getElementById(sectionId);
-    section.style.display = "block";
+    section.style.display = "flex";
     main.style.display = "none";
     document.getElementById(backId).onclick = () => {
       main.style.animationName = "show";
