@@ -463,16 +463,22 @@ body {
 
 /* ─── Sections ───────────────────────────────────────────── */
 section {
-  display: block;
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 24px 16px;
   text-align: center;
   margin: 0;
-  overflow-y: auto;
-  padding: 16px 0;
 }
 
 .section-panel {
   position: relative;
-  display: inline-block;
+  display: block;
   padding: 32px 52px 24px;
   max-width: 720px;
   width: 90%;
@@ -573,7 +579,8 @@ section p {
 
 /* ─── Terminal card (About) ──────────────────────────────── */
 .terminal-card {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto 8px;
   border: 1px solid rgba(130, 183, 190, 0.22);
   border-radius: 6px;
@@ -957,10 +964,11 @@ section p {
   .main-panel { padding: 32px 28px 24px; }
   .main nav { gap: 6px; }
   .main nav button { font-size: 8px; padding: 8px 12px; letter-spacing: 1px; }
-  section p { width: 78%; font-size: 12px; }
-  .timeline { width: 88%; }
-  .skills-grid { width: 90%; grid-template-columns: 1fr 1fr; }
-  .terminal-card { width: 90vw; }
+  section { padding: 32px 12px; }
+  .section-panel { padding: 24px 24px 20px; }
+  section p { width: 90%; font-size: 12px; }
+  .timeline { width: 96%; }
+  .skills-grid { width: 96%; grid-template-columns: 1fr 1fr; }
   .t-key { min-width: 80px; font-size: 11px; }
   .t-val { font-size: 11px; }
 }
@@ -988,11 +996,12 @@ section p {
   .main nav button { font-size: 7px; padding: 7px 10px; letter-spacing: 1px; }
   .main .networks { margin: 10px auto; width: 70%; }
   .main .networks a { width: 24px; height: 24px; font-size: 13px; margin: 0 10px; }
-  section p { width: 88%; font-size: 11px; }
-  .timeline { width: 92%; }
-  .skills-grid { width: 94%; grid-template-columns: 1fr; }
+  section { padding: 24px 8px; }
+  .section-panel { padding: 20px 16px 16px; width: 96%; }
+  section p { width: 100%; font-size: 11px; }
+  .timeline { width: 98%; }
+  .skills-grid { width: 100%; grid-template-columns: 1fr; }
   .skill-card-wide { grid-column: span 1; }
-  .terminal-card { width: 95vw; }
   .t-key { min-width: 70px; font-size: 10px; padding-right: 10px; }
   .t-val { font-size: 10px; }
   .terminal-body { padding: 14px 16px 12px; }
